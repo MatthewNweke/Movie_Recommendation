@@ -59,11 +59,11 @@ function App() {
     <div className="App" id="blur">
       <div>
         <div className="navbar">
-          <h2>Most Popular Movies</h2>{" "}
+          <h2 className="text">Most Popular Movies</h2>{" "}
           <div className="searchDiv rounded-xl ">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} max>
               <input
-                className="search"
+                className="search max-sm:hidden"
                 type="text"
                 value={query}
                 onChange={handleInputChange}
