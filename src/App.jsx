@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovies } from "./components/redux/actions/movieActions"; // Assuming you have this action creator
-import './style/navbar.css'
+
 import "./App.css";
+import "./style/navbar.css";
 import Cards from "./components/Cards";
 import logo from "./assets/logo.png";
 
@@ -65,13 +66,11 @@ function App() {
         </div>
       </div>
       <section className="gridContainer">
-        {movies.length > 0 ? (
-          movies.map((movie, index) => {
+        {movies
+          .filter((movie) => movie.original_title && movie.poster_path) // Filter out movies without title or poster
+          .map((movie, index) => {
             return <Cards key={index} {...movie} />;
-          })
-        ) : (
-          <div>No movies found</div>
-        )}
+          })}
       </section>
     </div>
   );
