@@ -14,8 +14,7 @@ function App() {
   const movies = useSelector((state) => state.movies);
 
   useEffect(() => {
-    // Fetching popular movies initially
-    dispatch(fetchMovies());
+    
   }, [dispatch]);
 
   const handleSearch = async () => {
