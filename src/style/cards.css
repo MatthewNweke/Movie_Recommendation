@@ -35,5 +35,25 @@
 
 .name{
     text-align: center;
-    font-size: 12px;
+    font-size: 0.8rem;
+}
+
+.card_container{
+    cursor: pointer;
+   
+}
+
+
+
+.card_description{
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+
+.download_btn{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
 }

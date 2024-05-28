@@ -14,7 +14,7 @@ function App() {
   const movies = useSelector((state) => state.movies);
 
   useEffect(() => {
-    
+    dispatch(fetchMovies());
   }, [dispatch]);
 
   const handleSearch = async () => {
@@ -48,7 +48,7 @@ function App() {
   return (
     <div className="App">
       <div className="navbar">
-        <h2>Most Popular Movies</h2>
+        <h2>My Movies</h2>
         <div className="searchDiv rounded-xl">
           <form onSubmit={handleSubmit}>
             <input
